@@ -1,16 +1,27 @@
-const { model, Schema } = require('mongoose');
+const express = require("express");
+const router = express.Router();
+const User = require("../classes/user");
+const authenticate = require("../middleware/authMiddleware");
 
-// Connect to MongoDB
-const userModel = new Schema({
-    
-    name: { type: String, required: true },
-    email: { type: String, unique: true, required: true },
-    password: { type: String, required: true },
-    phonenumber: { type: String, required: true },
-    role: { type: String, enum: ['student', 'admin', 'startup'], required: true },
-    created_at: { type: Date, default: Date.now },
-    updated_at: { type: Date, default: Date.now }
+// Get all users (Admin only)
+router.get("/", authenticate, async (req, res) => {
+  try {
+    if (req.user.role !== "admin") return res.status(403).json({ message: "Forbidden" });
+    const users = await User.find();
+    res.status(200).send(users);
+  } catch (error) {
+    res.status(500).send(error);
+  }
 });
 
+// Get user by ID (Protected)
+router.get("/find/:id", authenticate, async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    res.status(200).send(user);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
 
-module.exports = model('User', userModel, "users");
+module.exports = router;

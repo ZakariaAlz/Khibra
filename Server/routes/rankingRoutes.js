@@ -1,8 +1,8 @@
-const express = require('express');
-const RankingController = require('../controllers/RankingController');
+// const express = require('express');
+// const RankingController = require('../controllers/RankingController');
 
-const router = express.Router();
+// const router = express.Router();
 
-router.get('/', RankingController.getRankings);
+// router.get('/', RankingController.getRankings);
 
-module.exports = router;
+// module.exports = router;
