@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: url('unsplash_75xPHEQBmvA.svg')
+        }
+        .task-container {
+    margin-right: 20px; /* Adjust this value to create space */
+}
+
+        header {
+    display: flex;
+    justify-content: flex-start; /* Aligns items to the left */
+    align-items: center;
+    width: 90%;
+    padding: 15px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    gap: 20px; /* Adds spacing between search and profile */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    max-width: 800px;
+    position: relative;
+    background: linear-gradient(to right, #7199FF 40%, white 100%);
+    border-radius: 25px;
+    padding: 5px; /* Adds some space inside */
+}
+
+#search {
+    flex: 1;
+    width: 100%;
+    padding: 12px 50px; /* Extra padding to avoid text overlapping with icons */
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    background: transparent; /* Makes sure it blends with the container */
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon.left {
+    left: 15px;
+}
+
+.search-icon.right {
+    right: 15px;
+}
+
+.search-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon.left {
+    left: 15px;
+}
+
+.search-icon.right {
+    right: 15px;
+}
+
+
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+        
+        main {
+    display: flex;
+    justify-content: space-around; /* Creates more space between sections */
+    width: 90%;
+    margin-top: 20px;
+}
+
+        
+        .task-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            width: 70%;
+        }
+        
+        .task-card {
+    background: linear-gradient(to bottom, #7199FF 60%, white 100%);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+        
+.sidebar {
+    background: linear-gradient(to bottom, #7199FF 30%, white 100%);
+}
+
+.points {
+    background: linear-gradient(to right, #7199FF 50%, white 100%);
+}
+
+.weekly-overview {
+    position: relative;
+    left: 30px; /* Adjust this value until it looks perfect */
+}
+
+
+.weekly-overview img {
+    width: 80%; /* Make sure the image fits */
+    height: auto;
+}
+
+
+        .ongoing-task-card {
+            background: #e9eff6;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .ongoing-tasks {
+    text-align: center; /* Centers the text inside the div */
+    width: 100%; /* Ensures it takes the full width of its container */
+    margin-left: 0; /* Resets any previous left positioning */
+}
+
+.details-btn, .submit-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* DETAILS BUTTON STYLE */
+.details-btn {
+    background: linear-gradient(135deg, #4a90e2, #007bff);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+.details-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(0, 123, 255, 0.6);
+}
+
+/* SUBMIT BUTTON STYLE */
+.submit-btn {
+    background: linear-gradient(135deg, #41d9ff, #2b95ff);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(71, 43, 255, 0.4);
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 14px rgba(43, 82, 255, 0.6);
+}
+
+        #anchor{
+            font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0039CA;
+    padding: 10px 20px;
+    border: 2px solid #0039CA;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+        }
+        #anchor:hover {
+    background-color: #0039CA;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0, 57, 202, 0.3);
+}
+.search-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon.left {
+    left: 15px;
+}
+
+.search-icon.right {
+    right: 15px;
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Moves everything inside to the right */
+}
+#etoile {
+    background-color: gold;  /* Gold background */
+    color: black;  /* Black text */
+    font-weight: bold;  /* Makes text a little fatter */
+    font-size: 16px;  /* Adjust font size */
+    padding: 12px 30px;  /* Adds some space inside */
+    border: none;  /* Removes default border */
+    border-radius: 8px;  /* Slightly rounded corners */
+    cursor: pointer;  /* Makes it clickable */
+    transition: all 0.3s ease-in-out;  /* Smooth hover effect */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+#etoile:hover {
+    background-color: #e6c300;  /* Slightly darker gold on hover */
+    transform: scale(1.05);  /* Slight pop effect */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <!-- Left SVG Icon -->
+            <img src="material-symbols_search-rounded.svg" class="search-icon left">
+        
+            <!-- Search Input -->
+            <input type="text" id="search" placeholder="Search tasks...">
+        
+            <!-- Right SVG Icon -->
+            <img src="Frame 277.svg" class="search-icon right">
+        </div>
+        
+    
+        <div class="profile">
+            <span><a href="Frame 269.svg" id="anchor">Belkacem Nour</a></span>
+            <img src="Group 15.svg" alt="Profile">
+        </div>
+    </header>
+    
+    
+    
+    <main>
+        <section class="task-container" id="task-container">
+            <!-- Tasks will be dynamically loaded here -->
+        </section>
+        
+        <aside class="sidebar">
+            <div class="points"><button id="etoile">⭐ 1024P</button></div>
+            <div class="weekly-overview">
+                <img src="Graph 2.svg" alt="Weekly Overview">
+                <canvas id="chart"></canvas>
+            </div>
+            <div class="ongoing-tasks">
+                <h3>Ongoing tasks</h3>
+                <div id="ongoing-tasks"></div>
+            </div>
+        </aside>
+    </main>
+    <script defer src="index9.js"></script>
+</body>
+</html>

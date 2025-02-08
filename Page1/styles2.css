@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('unsplash_75xPHEQBmvA.svg') no-repeat center center/cover;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1100px;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Login Form */
+.login-form {
+    width: 50%;
+    padding: 20px;
+    background: transparent;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Input Fields */
+.input-group {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #7199FF, #8AAEFF);
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    max-width: 350px;
+}
+
+#Pass {
+    margin-top: 10px;
+}
+
+/* Icons inside input */
+.input-group .input-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+/* Input Text */
+.input-group input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+/* Placeholder Text */
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Sign-in Button */
+.signin-btn {
+    background: #0039CA;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 57, 202, 0.4);
+    margin-top: 20px;
+    width: 200px;
+    display: block;
+}
+
+.signin-btn:hover {
+    box-shadow: 0 8px 20px rgba(0, 57, 202, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Options */
+.options {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* Forgot Password Styling */
+.forgot-password {
+    color: #0039CA;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Sign Up Styling */
+.sign-up {
+    color: #0039CA;
+    text-decoration: none;
+    font-size: 13px; /* Slightly smaller */
+    font-weight: bold;
+}
+
+.sign-up:hover {
+    text-decoration: underline;
+}
+
+/* Custom Checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.remember-text {
+    margin-left: 8px;
+    font-weight: bold;
+}
+
+/* Hide default checkbox */
+.checkbox-container input {
+    display: none;
+}
+
+/* Custom checkbox */
+.checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #0039CA;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+/* Checkbox checked style */
+.checkbox-container input:checked + .checkmark {
+    background-color: #0039CA;
+}
+
+/* Checkbox checkmark */
+.checkbox-container input:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* "Or login with" Section */
+.or {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.or span {
+    flex: 1;
+    height: 1px;
+    background: #ccc;
+    margin: 0 10px;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    justify-content: center;
+}
+
+.social-login button {
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-login button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Illustration */
+.illustration {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration img {
+    width: 100%;
+    height: auto;
+}
+/* Positioning the arrow (lets-icons_back.svg) at the top-left of the page */
+#arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px; /* Adjust as needed */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Positioning Highlight_06 at the top-left of the illustration */
+.illustration {
+    position: relative;
+}
+
+#High {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+}
+
+

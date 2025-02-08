@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: flex-end; /* Pushes content to the right */
+    height: 100vh;
+    align-items: center;
+    background: url('unsplash_75xPHEQBmvA.svg') no-repeat center center/cover;
+}
+
+.container {
+    width: 400px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 50px; /* Adjust this for spacing from the right */
+}
+#Pa{
+    
+        font-weight: 100; /* Makes the text thinner */
+        color: #333; /* Optional: Keeps it looking clean and readable */
+    
+}
+.right-section {
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+}
+
+.input-group input,
+.input-group select {
+    background: linear-gradient(135deg, #7199FF, #8AAEFF);
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    max-width: 350px;
+}
+
+
+/* Sign-in Button */
+.signup-btn {
+    background: #0039CA;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 57, 202, 0.4);
+    margin-top: 20px;
+    width: 200px;
+    display: block;
+}
+
+.signup-btn:hover {
+    box-shadow: 0 8px 20px rgba(0, 57, 202, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Social Login Buttons */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* Adds spacing between buttons */
+}
+
+/* General button styling */
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Smooth edges */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Button hover effect */
+.social-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Button images */
+.social-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+#arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px; /* Adjust as needed */
+    height: auto;
+    cursor: pointer;
+}
+/* Checkbox container */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold; /* Makes the text slightly fatter */
+    cursor: pointer;
+}
+
+/* Hide default checkbox */
+.custom-checkbox input {
+    display: none;
+}
+
+/* Custom checkbox style */
+.checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Checkmark inside the box */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 6px;
+    height: 12px;
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+/* Show checkmark when checked */
+.custom-checkbox input:checked + .checkmark::after {
+    opacity: 1;
+}
+
+/* Style for "I agree to all the" */
+.custom-checkbox .text {
+    font-weight: 600; /* Slightly bolder */
+    color: #333;
+    margin-right: 5px;
+}
+
+/* Style for Terms & Privacy Policies */
+.custom-checkbox a {
+    color: #0039CA;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+/* Hover effect for Terms link */
+.custom-checkbox a:hover {
+    text-decoration: underline;
+}
+/* Style for "Already have an account?" */
+.auth-text span {
+    font-weight: 600; /* Makes it a little bolder */
+    color: #333; /* Black-like color */
+}
+
+/* Style for "Sign in" */
+.auth-text a {
+    color: #0039CA;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+/* Hover effect for Sign in */
+.auth-text a:hover {
+    text-decoration: underline;
+}
+

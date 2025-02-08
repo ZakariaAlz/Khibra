@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Navigation Bar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background: linear-gradient(to bottom, rgba(113, 153, 255, 0.6) 1%, rgba(255, 255, 255, 0.6) 100%);
+
+    padding: 0.5rem 2rem; /* Thinner navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw; /* Full width */
+    border-radius: 20px; /* Rounded edges */
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+}
+
+.nav-left a {
+    font-size: 1.8rem; /* Bigger KH */
+    font-weight: bold;
+    color: #0039CA;
+    text-decoration: none;
+}
+
+.nav-center, .nav-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center; /* ✅ This will fix the vertical alignment */
+}
+
+
+.nav-center a, .nav-right a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.nav-center a {
+    color: #0039CA;
+}
+
+.nav-right a {
+    color: #0039CA; /* Same blue as the others */
+}
+
+.nav-right a:last-child {
+    padding: 0.5rem 1rem;
+    border: 2px solid #0039CA; /* Blue border */
+    border-radius: 10px;
+    color: #0039CA;
+}
+/* Hover effect for all links */
+.nav-center a,
+.nav-right a {
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    position: relative;
+    cursor: pointer; /* Hand cursor */
+}
+
+.nav-center a:hover,
+.nav-right a:hover {
+    color: lightgray; /* Gris clair */
+}
+
+
+/* Underline effect */
+.nav-center a:hover::after,
+.nav-right a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: lightgray; /* Gris clair */
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Button hover effect */
+.nav-right a:last-child {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-right a:last-child:hover {
+    background-color: #0039CA; /* Blue */
+    color: white; /* White text */
+    transform: scale(1.1); /* Slightly bigger */
+}
+</style>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+    
+            <a href="#">
+                <img src="KHIBRA 2.svg" alt="KH Logo" width="70">
+            </a>
+        
+    </div>
+        <div class="nav-center">
+            <a href="index1.html">Home</a>
+            <a href="index4.html">About</a>
+            <a href="index5.html">Services</a>
+        </div>
+        
+        <div class="nav-right">
+            <a href="index2.html">Sign in</a>
+            <a href="index3.html">Sign up</a>
+        </div>
+    </nav>
+    <img src="MacBook Air - 7.svg">
+</body>
+</html>

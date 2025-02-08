@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioned Button</title>
+    <style>
+        body {
+            position: relative;
+            display: flex;
+            justify-content: center; /* Centering the image */
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            position: relative;
+            display: inline-block; /* Keeps size relative to content */
+        }
+
+        .svg-image {
+            width: 100%; /* Make sure it scales properly */
+            height: auto;
+        }
+
+        .custom-button {
+    position: absolute;
+    top: 93px; /* Adjust for fine positioning */
+    left: 1057px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFC72C; /* Yellow */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 40px; /* Increased horizontal padding */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    gap: 8px;
+    min-width: 180px; /* Ensures a longer width */
+}
+
+
+        .custom-button:hover {
+            background-color: #E6B800;
+            box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Frame 269.svg" alt="SVG Image" class="svg-image">
+        <button class="custom-button">
+            <img src="Vector (1).png" alt="Star Icon" class="icon"> 1024P
+        </button>
+    </div>
+</body>
+</html>
+
