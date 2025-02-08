@@ -9,6 +9,9 @@ router.post("/create", authenticate, async (req, res) => {
     if (req.user.role !== "company") return res.status(403).json({ message: "Only companies can create tasks" });
     req.body.postedBy = req.user.id;
     const newTask = await Task.create(req.body);
+    if (!req.body.title || !req.body.description) {
+      return res.status(400).json({ message: "Title and description are required" });
+    }    
     res.status(201).send(newTask);
   } catch (error) {
     res.status(500).send(error);

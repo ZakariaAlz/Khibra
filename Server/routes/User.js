@@ -18,6 +18,12 @@ router.get("/", authenticate, async (req, res) => {
 router.get("/find/:id", authenticate, async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
+
+      // Check if the user exists
+      if (!user) {
+        return res.status(404).json({ message: "User not found" });
+      }
+      
     res.status(200).send(user);
   } catch (error) {
     res.status(500).send(error);

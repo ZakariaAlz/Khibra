@@ -4,8 +4,12 @@ const bcrypt = require("bcrypt");
 class User {
   // Create a new user
   static async create(user) {
-    user.password = await bcrypt.hash(user.password, 10);
-    return await UserModel.create(user);
+    try{
+      user.password = await bcrypt.hash(user.password, 10);
+      return await UserModel.create(user);
+    } catch(error){
+      throw new Error("Error creating user: " + error.message)
+    }
   }
 
   // Find all users
