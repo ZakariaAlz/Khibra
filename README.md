@@ -1,34 +1,38 @@
-Student Job Portal
-Project Description
-The Student Job Portal is a web application designed to help university students gain valuable experience and secure a job before or after graduation. The platform offers a range of features, including job listings, profile management, and AI-driven insights to help students improve their job prospects.
+# Student Job Portal
+
+## Project Description
+
+The **Student Job Portal** is a web application designed to help university students gain valuable experience and secure a job before or after graduation. The platform offers a range of features, including job listings, profile management, and AI-driven insights to help students improve their job prospects.
 
 This project was built during a hackathon with a focus on creating a user-friendly platform where students can discover job opportunities, build their resumes, and get personalized advice based on AI models.
 
-Technologies Used
-Backend:
+## Technologies Used
 
-Express.js: A web application framework for Node.js, used for building the server and API endpoints.
-MongoDB: A NoSQL database used to store user data and job listings.
-Frontend:
+- **Backend**:  
+  - **Express.js**: A web application framework for Node.js, used for building the server and API endpoints.
+  - **MongoDB**: A NoSQL database used to store user data and job listings.
 
-HTML5, CSS3, JavaScript (Vanilla JS): Used for building the user interface and adding interactivity to the web pages.
-AWS: Utilized for cloud hosting and database management.
+- **Frontend**:
+  - **HTML5**, **CSS3**, **JavaScript** (Vanilla JS): Used for building the user interface and adding interactivity to the web pages.
 
-AI Models: Integrated AI models for analyzing resumes and providing personalized career advice to students.
+- **AWS**: Utilized for cloud hosting and database management.
 
-Installation
-Prerequisites
-Node.js (version 14 or higher)
-MongoDB (running locally or via a cloud provider like MongoDB Atlas)
-AWS Account (for deployment and cloud services)
-Steps to Run Locally
-Clone the repository:
+- **AI Models**: Integrated AI models for analyzing resumes and providing personalized career advice to students.
 
-bash
-Copier
-Modifier
-git clone https://github.com/your-username/student-job-portal.git
-cd student-job-portal
+## Installation
+
+### Prerequisites
+
+- **Node.js** (version 14 or higher)
+- **MongoDB** (running locally or via a cloud provider like MongoDB Atlas)
+- **AWS Account** (for deployment and cloud services)
+
+### Steps to Run Locally
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/student-job-portal.git
+   cd student-job-portal
 Install dependencies:
 
 bash
